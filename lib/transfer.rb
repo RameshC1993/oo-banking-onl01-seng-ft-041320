@@ -21,7 +21,7 @@ class Transfer
     if @status == "complete"
       return
     end
-    if @sender.balance >= @amount 
+    if @sender.balance >= @amount && @sender.valid? && @receiver.valid?
       @sender.deposit(-@amount)
       @receiver.deposit(@amount)
       @status = "complete"
