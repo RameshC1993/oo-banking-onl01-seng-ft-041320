@@ -21,7 +21,7 @@ class Transfer
     if @status == "complete"
       return "Transaction rejected. Please check your account balance."
     end
-    if !@receiver.valid? || !@receiver.valid?
+    if !@receiver.valid? || !@sender.valid?
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     end
