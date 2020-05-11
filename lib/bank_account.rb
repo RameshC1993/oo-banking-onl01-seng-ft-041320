@@ -11,4 +11,8 @@ class BankAccount
   def deposit(total)
     @balance += total
   end
+  
+  def desplay_balance
+    @balance
+  end
 end
