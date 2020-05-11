@@ -1,3 +1,3 @@
 class Transfer
-  # your code here
+  attr_accessor :Transfer, :sender, :re
 end
