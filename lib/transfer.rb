@@ -25,7 +25,7 @@ class Transfer
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
     end
-    if @sender.balance > @amount
+    if @sender.balance > @amount && @status == "pending"
       @sender.deposit(-@amount)
       @receiver.deposit(@amount)
       @status = "complete"
